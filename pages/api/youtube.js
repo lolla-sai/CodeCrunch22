@@ -1,6 +1,6 @@
 var BASE_URL = new URL("https://youtube.googleapis.com/youtube/v3/search");
 var API_KEY = process.env.YOUTUBE_API_KEY;
-var MAX_RESULTS = 15;
+var MAX_RESULTS = 8;
 
 export default async function handler(req, res) {
     let { keyword } = req.query;
