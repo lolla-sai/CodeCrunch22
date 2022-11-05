@@ -1,7 +1,7 @@
 var BASE_URL = new URL("https://api.stackexchange.com/2.3/search");
 
 export default async function handler(req, res) {
-    let { keyword, max_results = 15 } = req.query;
+    let { keyword, max_results = 8 } = req.query;
     BASE_URL.searchParams.set("order", "desc");
     BASE_URL.searchParams.set("sort", "activity");
     BASE_URL.searchParams.set("intitle", keyword);
