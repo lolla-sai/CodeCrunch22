@@ -1,7 +1,7 @@
 var BASE_URL = new URL("https://api.twitter.com/1.1/search/tweets.json");
 
 export default async function handler(req, res) {
-    let { keyword, max_results = 10 } = req.query;
+    let { keyword, max_results = 8 } = req.query;
     BASE_URL.searchParams.set("q", keyword);
     BASE_URL.searchParams.set("count", max_results);
 
