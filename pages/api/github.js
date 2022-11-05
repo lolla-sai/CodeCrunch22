@@ -1,7 +1,7 @@
 var BASE_URL = new URL("https://api.github.com/search/repositories");
 
 export default async function handler(req, res) {
-    let { keyword, max_results = 15 } = req.query;
+    let { keyword, max_results = 8 } = req.query;
 
     BASE_URL.searchParams.set("q", keyword);
     BASE_URL.searchParams.set("per_page", max_results);
